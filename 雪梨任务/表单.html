@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表单</title>
+    <style type="text/css">
+    legend{
+        color:red;
+    }
+    span{
+        color:red;
+    }
+    fieldset{
+        width:470px;
+    }
+    </style>
+</head>
+<body>
+    <h1>毕业生信息</h1>
+    <form id="student" method="get" action="">
+        <fieldset>
+            <legend>学生信息</legend>
+            姓&nbsp;&nbsp;名:&nbsp;&nbsp;<input type="text" name="name1" autofocus="autofocus" required placeholder="请输入姓名" >&nbsp;<span>*</span>
+            <br>
+            学&nbsp;&nbsp;号:&nbsp;&nbsp;<input type="text" name="number"  required placeholder="请输入学号"/>&nbsp;<span>*</span>
+            <br>
+            手&nbsp;&nbsp;机:&nbsp;&nbsp;<input type="tel"  placeholder="请输入手机号" name="te"/>&nbsp;<span>*</span>
+            <br>
+            邮&nbsp;&nbsp;箱:&nbsp;&nbsp;<input  type="email"  name="email" placeholder="请输入邮箱地址"  />&nbsp;<span>*</span>
+        </fieldset>
+    </form>
+    <br>
+    <form id="admit" method="get" action="">
+        <fieldset>
+            <legend>录取情况</legend>
+            录取学校&nbsp;<input type="text" name="name2" required >
+            <br>
+            录取成绩&nbsp;<input  type="text" name="grade" required >
+            <br>
+            入学成绩&nbsp;<input type="date" name="datedemo" />
+        </fieldset>
+    </form>
+    <br>
+    <input type="submit" value="提交" />
+    
+</body>
+</html>
