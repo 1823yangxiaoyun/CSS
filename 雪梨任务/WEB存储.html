@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WEB存储</title>
+    <style type="text/css">
+    #de{
+        background-color: #e0e0e0;
+        color:white;
+        text-align: center;
+        cursor: pointer;
+        padding:4px;
+        position: relative;
+        left:30px;
+        top:15px;
+
+    }
+    #record{
+        background-color: #e0e0e0;
+        height:auto;
+        width:auto;
+        float:left;
+        margin:6px;
+    }
+    div{
+        height:100%;
+        width:370px;
+    }
+    #search{
+        width:139px;
+    }
+    </style>
+</head>
+<body>
+    <form action="#" method="">
+    <input type="text" value="" id="text"  placeholder="请输入查找的商品" autofocus="autofocus" list="name" />
+    <input type="button" value="搜索" id="search"  onclick="add();"/>
+    <datalist id="name">
+			<option>电脑</option>
+            <option>华为手机</option>
+            <option>笔记本</option>
+		</datalist>
+    </form>
+    <p>最近搜索</p>
+    <div id="history">
+    </div>
+    <span id="de">X</span>
+    <script>
+        add1("history");
+        function add(){
+            var text = document.getElementById('text');
+            if(text.value==""){
+                alert("请输入内容!!");
+            }
+            else{
+                localStorage.setItem(text.value, text.value);
+                add1("history");
+            }
+        }
+        function add1(id){
+            var target = document.getElementById(id);
+            target.innerHTML="";
+            for(var i=0; i<localStorage.length; i++){
+                var key = localStorage.key(i);
+			    var data = localStorage.getItem(key);
+                var p=document.createElement('span');
+                p.append(data); 
+                p.setAttribute('id',"record");
+                target.appendChild(p); 
+            }
+        }
+        var de=document.getElementById("de");
+        de.onclick = function() {
+            localStorage.clear();
+            var target = document.getElementById("history");
+            target.innerHTML="";
+        }
+    </script>
+</body>
+</html>
