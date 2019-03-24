@@ -55,28 +55,40 @@
                 alert("请输入内容!!");
             }
             else{
-                localStorage.setItem(text.value, text.value);
+                var time = new Date().getTime();
+                localStorage.setItem(time, text.value);
                 add1("history");
             }
         }
         function add1(id){
             var target = document.getElementById(id);
             target.innerHTML="";
+            var arr= new Array(localStorage.length);
+            var arr2=[];
             for(var i=0; i<localStorage.length; i++){
                 var key = localStorage.key(i);
-			    var data = localStorage.getItem(key);
+                arr[i]= localStorage.getItem(key);
+            }
+            //去重
+            for (var i = 0; i < arr.length; i++) {
+                    if (arr2.indexOf(arr[i]) == -1) {
+                        arr2.push(arr[i]);
+                    }
+            }
+            //放入
+            for(var i=0; i< arr2.length; i++){
                 var p=document.createElement('span');
-                p.append(data); 
+                p.append(arr2[i]); 
                 p.setAttribute('id',"record");
                 target.appendChild(p); 
+                }
             }
-        }
-        var de=document.getElementById("de");
-        de.onclick = function() {
-            localStorage.clear();
-            var target = document.getElementById("history");
-            target.innerHTML="";
-        }
+            var de=document.getElementById("de");
+            de.onclick = function() {
+                localStorage.clear();
+                var target = document.getElementById("history");
+                target.innerHTML="";
+                }
     </script>
 </body>
 </html>
