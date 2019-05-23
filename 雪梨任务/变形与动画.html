@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        width:350px;;
+        height:450px;
+        box-shadow:2px 2px 3px 5px rgb(228, 227, 227);
+       
+    }
+    img{
+        transform: scale(1,1);
+        transition: transform 0.6s ease-in-out;
+      
+    }
+    .div1{
+        width:350px;;
+        height:250px;
+        overflow:hidden;
+    }
+    .gai{
+        width:350px;
+        height:250px;
+        position: absolute;;
+        top:8px;
+        left:8px;
+       
+    }
+    .div2{
+        width:350px;
+        height:100px;
+        background:#fff;
+        position: absolute;
+        left:8px;
+        top:258px;
+        transition: height 0.6s,width 0.6s,top 0.6s;
+        transition-timing-function:ease-in-out;
+        overflow: hidden;
+    }
+    .div3{
+        position: absolute;
+        left:8px;
+        top:228px;
+        height:30px;
+        width:60px;
+        text-align: center;
+        font-size: 13px;
+        line-height: 30px;
+        background-color:rgb(236, 98, 6);
+        color:white;
+        transition: top 0.6s;
+        transition-timing-function:ease-in-out;
+    }
+    #span1{
+        position: fixed;
+        top:425px;
+        left:20px;
+        color:rgb(126, 120, 120);
+        font-size: 13px;
+        
+    }
+    #span2{
+        position: fixed;
+        top:425px;
+        left:80px;
+        font-size: 13px;
+        color:rgb(126, 120, 120)
+    }
+    .p1{
+        opacity:0;
+        transition: opacity 0.5s;
+        transition-delay: 0.2s;
+        transition-timing-function:ease;
+        font-size:16px;
+        line-height:30px;
+        color:rgb(126, 120, 120)
+    }
+    .p2{
+        font-size:20px;
+        font-weight:normal;
+        color:rgb(236, 98, 6);
+    }
+    .box:hover .p1{
+        opacity: 1;
+    }
+    .box:hover img{
+        transform: scale(1.35,1.35);
+      
+    }
+    .box:hover{
+        box-shadow:2px 2px 3px 5px rgb(192, 190, 190);
+        
+    }
+    .box:hover .div2{
+        width:350px;
+        height:300px;
+        top:135px;
+    }
+    .box:hover .gai{
+        background:rgba(15, 15, 15, 0.5);
+    }
+    .box:hover .div3{
+        top:105px;
+    }
+</style>
+<body>
+    <div class="box">
+        <div class="div1">
+            <img src="images/zhanqiao.jpg" width="400" height="300"/>
+        </div>
+        <div class="div2">
+            <h2>&nbsp;&nbsp;青岛栈桥</h2>
+            <p class="p2">&nbsp;&nbsp;国家AAAAA级旅游景区</p>
+           <div class="p1">
+                &nbsp;&nbsp;青岛栈桥是青岛海滨风景区的景点之一，是国务 &nbsp;&nbsp;院于1982年首批公布的国家级风景名胜区。青 &nbsp;&nbsp;岛栈桥位于游人如织的青岛中山南端，桥身从海 &nbsp;&nbsp;岸探入如弯月般的青岛湾深处，桥身供游人参观 &nbsp;&nbsp;并在此停靠旅游船，由此乘船可看海上青岛。
+           </div>
+        </div>
+        <div class="div3">照片</div>
+      <span id="span1">刚刚</span>
+      <span id="span2">1W+评论</span>
+    </div>
+</body>
+</html>
