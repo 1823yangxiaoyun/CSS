@@ -23,9 +23,7 @@
         height:250px;
         overflow:hidden;
     }
-    .gai{
-        width:350px;
-        height:250px;
+    #gai{
         position: absolute;;
         top:8px;
         left:8px;
@@ -101,7 +99,7 @@
         height:300px;
         top:135px;
     }
-    .box:hover .gai{
+    .box:hover #gai{
         background:rgba(15, 15, 15, 0.5);
     }
     .box:hover .div3{
@@ -112,8 +110,9 @@
     <div class="box">
         <div class="div1">
             <img src="images/zhanqiao.jpg" width="400" height="300"/>
-             <div class="gai"></div>
+            <canvas id="gai" width="350" height="250"></canvas>
         </div>
+        
         <div class="div2">
             <h2>&nbsp;&nbsp;青岛栈桥</h2>
             <p class="p2">&nbsp;&nbsp;国家AAAAA级旅游景区</p>
@@ -125,5 +124,18 @@
       <span id="span1">刚刚</span>
       <span id="span2">1W+评论</span>
     </div>
+   <script>
+        var canvas = document.getElementById("gai");
+        var context = canvas.getContext("2d");
+        context.arc(310,45, 25, 0, 2* Math.PI);
+        context.fillStyle="rgb(236, 98, 6)";
+        context.fill();
+        context.font = "bold 15px 微软雅黑";
+        context.fillStyle = "white";
+        var txt = "15";
+        context.fillText(txt, 300, 41);
+        var txt1 = "五月";
+        context.fillText(txt1, 295, 61);
+    </script>
 </body>
 </html>
