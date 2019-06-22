@@ -60,7 +60,7 @@ font-family: '幼圆'
     left:30%;
 }
 #i3{
-  
+     float:left;
     height:45px;
     width:260px;
     background:#e1e1e1;
