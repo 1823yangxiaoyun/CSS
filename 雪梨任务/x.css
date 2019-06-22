@@ -52,12 +52,17 @@ font-family: '幼圆'
     display:none;
 
 }
-#i3{
-    position: absolute;
-    top:72%;
-    left:40%;
+#suo{
     height:45px;
-    width:280px;
+    width:480px;
+    position:absolute;
+    top:75%;
+    left:30%;
+}
+#i3{
+  
+    height:45px;
+    width:260px;
     background:#e1e1e1;
     border:none;
 }
@@ -66,16 +71,14 @@ font-family: '幼圆'
 }
 #i4{
     height:45px;
-    width:110px;
-    position: absolute;
-    top:72%;
-    left:32%;
+    width:90px;
+    float:left;
     background:#d3d3d8;
     border-radius: 15px  0 0 15px ;
    
 }
 #i4 img{
-    padding:12px 0 0 20px;
+    padding:12px 0 0 10px;
 }
 #i4 span{
     color:#535353;
@@ -83,9 +86,7 @@ font-family: '幼圆'
     float:right;
 }
 #s{
-    position: absolute;
-    top:72%;
-    left:62%;
+   
     background:url(img/search.png) no-repeat center;
     background-color:#cb5405;
     border-radius:0 15px  15px 0;
@@ -93,24 +94,13 @@ font-family: '幼圆'
 
 }
 @media screen and (max-width: 680px) {
-    #s{
-        left:73%;
-        top:65%;
-    }
-    #i4{
-        left:6%;
-        top:65%;
-    }
-    #i3{
-        left:28%;
-        top:65%;
-    }
     .navbar{
         min-height:80px;
     }
-}
-
-@media screen and (max-width: 680px) {
+    #suo{
+    top:65%;
+    left:11%;
+    }
     .lu11{
         color:white;
         font-size:20px;
